@@ -1,3 +1,7 @@
+:root{
+    --primary: #FF9138;
+}
+
 *{
     margin: 0;
 	padding: 0;
@@ -9,7 +13,7 @@
 
 
 .header{
-    margin: 10px 20px;
+    margin: 10px 10px;
     width: 1880px;
     height: 350px;
     border: 1px solid #000;
@@ -31,7 +35,7 @@
 .titleHeader{
     font-size: 2.5rem;
     font-weight: 700;
-    color: #FF9138;
+    color: var(--primary);
 }
 
 .titleBreadcrum {
@@ -44,3 +48,140 @@
 .titleBreadcrum p {
     margin: 0 10px; 
 }
+
+.container{
+    width: 1470px;
+    height: 100%;
+    margin: 10px 0;
+    display: flex;
+}
+
+.wrapper{
+    background-color: #ece7e7;
+}
+
+.boxLeft{
+    width: 400px;
+    margin-right: 5px;
+}
+
+.boxRight{
+    flex: 1;
+    background-color: var(--primary);
+}
+
+.back_gound-img{
+    margin-left: 0;
+    width: 400px;
+}
+
+.mentor{
+    position: absolute;
+    top: 525px;
+    width: 130px;
+    left: 430px;
+}
+
+.mentorName{
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 700;
+}
+
+.surplus,
+.birthDate,
+.titileMentor{
+    text-align: center;
+    color: rgb(149, 159, 159);
+}
+
+.btn,
+.coin,
+.address,
+.birthDate,
+.userIcon,
+.boxContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    background-color:  var(--primary);
+    border-radius: 4px;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.icon{
+    font-size: 1.5rem;
+}
+
+.userIcon{
+    margin: 20px 0;
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.address p{
+    margin: 10px 10px;
+    color: rgb(149, 159, 159);
+
+}
+
+.iconAddress{
+    margin: 5px 0;
+    color: var(--primary); 
+}
+
+.surplus{
+    margin-right: 10px;
+}
+
+.money{
+    color: var(--primary);
+}
+
+.btn-primary{
+    background-color: red;
+}
+
+.btn{
+    width: 250px;
+    margin: 5px 80px;
+    text-transform: uppercase;
+}
+
+.actions{
+    width: 400px;
+    height: 300px;
+}
+
+.actions h3{
+    margin: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.contentActions{
+    margin: 10px 20px;
+}
+
+.nameCourse{
+    color: rgb(149, 159, 159);
+}
+
+.timeCourse{
+    color: var(--primary);
+}
+
+.line{
+    width: 380px;
+    margin: 0 10px;
+}
+ 
+
+
