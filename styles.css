@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+.header{
+    margin: 10px 20px;
+    width: 1880px;
+    height: 350px;
+    border: 1px solid #000;
+}
+
+.header img{
+    width: 1880px;
+    height: 350px;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.title{
+    margin: -200px 0;
+    text-align: center;
+    z-index: 1;
+}
+
+.titleHeader{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FF9138;
+}
+
+.titleBreadcrum {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.titleBreadcrum p {
+    margin: 0 10px; 
+}
