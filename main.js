@@ -15,3 +15,5 @@ const charCount = document.getElementById('charCount');
       charCount.textContent = `${myInput.value.length}/200`;
     }
 });
+
+
