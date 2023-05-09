@@ -11,7 +11,9 @@
 </head>
 <body>
     <div class="header">
-        <img src="./image/demo.jpg" alt="banner">
+        <div class="bannerBG">
+            <img src="./image/demo.jpg" alt="banner">
+        </div>
        <div class="title">
         <h3 class="titleHeader">Tạo khóa học</h3>
         <div class="titleBreadcrum">
@@ -23,47 +25,48 @@
     </div>
     <div class="wrapper">
         <div class="container">
-            <div class="boxLeft">
-                <img class="back_gound-img" src="./image/images/banner-5.png" alt="">
-                <img class="mentor" src="./image/images/avatar-mentor-1.jpg" alt=""> 
-                <h3 class="mentorName">Mentor Cường</h3>
-                <p class="titileMentor">Mentor</p>
-                <div class="boxContainer">
-                    <div class="box">
-                        <i class="fa-brands fa-facebook icon"></i>
+            <div class="containerLeft">
+                <div class="boxLeft">
+                    <img class="back_gound-img" src="./image/images/overlay-bg.jpg" alt="">
+                    <img class="mentor" src="./image/images/avatar-mentor-1.jpg" alt=""> 
+                    <h3 class="mentorName">Mentor Cường</h3>
+                    <p class="titileMentor">Mentor</p>
+                    <div class="boxContainer">
+                        <div class="box">
+                            <i class="fa-brands fa-facebook icon"></i>
+                        </div>
+                        <div class="box">
+                            <i class="fa-solid fa-envelope icon"></i>
+                        </div>
+                        <div class="box">
+                            <i class="fa-brands fa-instagram icon"></i>
+                        </div>
                     </div>
-                    <div class="box">
-                        <i class="fa-solid fa-envelope icon"></i>
+                    <div class="userIcon">
+                        <i class="fa-sharp fa-solid fa-person"></i>
                     </div>
-                    <div class="box">
-                        <i class="fa-brands fa-instagram icon"></i>
+                    <p class="birthDate">27/01/2001</p>
+                    <div class="address">
+                        <i class="fa-solid fa-location-arrow iconAddress"></i>
+                        <p>Tân Bình, Tp Hồ Chí Minh</p>
                     </div>
+                    <div class="address">
+                        <i class="fa-solid fa-envelope iconAddress"></i>
+                        <p>mentor@gmail.com</p>
+                    </div>
+                    <div class="address">
+                        <i class="fa-solid fa-phone iconAddress"></i>
+                        <p>0946005077</p>
+                    </div>
+                    <div class="coin">
+                        <p class="surplus">Số dư hiện tại</p>
+                        <p class="money">300,000 BS</p>
+                    </div>
+                    <button class="btn" style="background-color: #FF9138; color: #FFFFFF; font-weight: 600;">Okeeee</button>
+                    <button class="btn" style="background-color: #FF9138; color: #FFFFFF; font-weight: 600;">Okeeee</button>
+                    <button class="btn" style="background-color: #FF9138; color: #FFFFFF; font-weight: 600;">Okeeee</button>
+                    <button class="btn" style="background-color: #FF9138; color: #FFFFFF; font-weight: 600;">Okeeee</button>
                 </div>
-                <div class="userIcon">
-                    <i class="fa-sharp fa-solid fa-person"></i>
-                </div>
-                <p class="birthDate">27/01/2001</p>
-                <div class="address">
-                    <i class="fa-solid fa-location-arrow iconAddress"></i>
-                    <p>Tân Bình, Tp Hồ Chí Minh</p>
-                </div>
-                <div class="address">
-                    <i class="fa-solid fa-envelope iconAddress"></i>
-                    <p>mentor@gmail.com</p>
-                </div>
-                <div class="address">
-                    <i class="fa-solid fa-phone iconAddress"></i>
-                    <p>0946005077</p>
-                </div>
-                <div class="coin">
-                    <p class="surplus">Số dư hiện tại</p>
-                    <p class="money">300,000 BS</p>
-                </div>
-                <button class="btn" style="background-color: #FF9138; color: #FFFFFF; font-weight: 600;">Okeeee</button>
-                <button class="btn" style="background-color: #FF9138; color: #FFFFFF; font-weight: 600;">Okeeee</button>
-                <button class="btn" style="background-color: #FF9138; color: #FFFFFF; font-weight: 600;">Okeeee</button>
-                <button class="btn" style="background-color: #FF9138; color: #FFFFFF; font-weight: 600;">Okeeee</button>
-
                 <div class="actions">
                     <h3>Các hoạt động gần đây</h3>
                     <div class="contentActions">
@@ -83,13 +86,145 @@
                     <hr class="line">
                 </div>
             </div>
+            <!-- slide-down -->
             <div class="boxRight">
-                
+                <div class="boxRight1">
+                    <div id="box1" class="line1">
+                        <p class="titleCourse">Thông tin khóa học</p>
+                        <i class="fa-solid fa-chevron-down iconDown"></i>
+                    </div>
+                    <div id="box2" class="test2"> 
+                       <div class="boxInputCourse">
+                            <label for="nameCourse" class="labelCourse">Tên khóa học</label>
+                            <div class="inputCourse">
+                                <input type="text">
+                            </div>
+                       </div>
+                       <div class="boxRadioCourse">
+                            <div class="titleBoxRadio">
+                                <p>Trình độ</p>
+                            </div>
+                            <div class="radioBox">
+                                <div class="form-check customRadio">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Beginner
+                                    </label>
+                                </div>
+                                <div class="form-check customRadio">
+                                    <input class="form-check-input" checked type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Intermediate
+                                    </label>
+                                </div>
+                                <div class="form-check customRadio">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                      Advanced
+                                    </label>
+                                </div>
+                                <div class="form-check customRadio">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                      Export
+                                    </label>
+                                </div>
+                            </div>
+                       </div>
+                       <div class="boxInputCourse moneyCourse">
+                            <label for="nameCourse" class="labelCourse">Giá tiền</label>
+                            <div>
+                                <input class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="uploadImage">
+                            <img src="./image/images/upload-img.jpg" alt="">
+                        </div>
+                        <div class="actionsImage">
+                            <p class="titleUpload">Hình ảnh</p>
+                            <input type="file" class="fileUpload">
+                            <button class="deleteImage" style="background-color: #FF9138; color: #FFFFFF; font-weight: 600;">Xóa Ảnh</button>
+                        </div>
+                        <div class="boxInputCourse field">
+                            <label for="nameCourse" class="labelCourse">Lĩnh Vực</label>
+                            <div class="form-group" style="width: 800px;">
+                                <select class="form-control select-with-icon" style="height: 50px;">
+                                  <option>Option 1</option>
+                                  <option>Option 2</option>
+                                  <option>Option 3</option>
+                                </select>
+                                <div class="customIconDown">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                            </div>                              
+                        </div>
+                        <div class="boxInputCourse field">
+                            <label for="nameCourse" class="labelCourse">Hình thức khóa học</label>
+                            <div class="form-group" style="width: 800px;">
+                                <select class="form-control select-with-icon" style="height: 50px;">
+                                  <option>Option 1</option>
+                                  <option>Option 2</option>
+                                  <option>Option 3</option>
+                                </select>
+                                <div class="customIconDown">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                            </div>                              
+                        </div>
+                        <div class="boxInputCourse moneyCourse">
+                            <label for="nameCourse" class="labelCourse">Link Google Meet:</label>
+                            <div>
+                                <input class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="boxInputCourse range">
+                            <p class="labelCourse">Số lượng học viên</p>
+                            <div class="min">
+                                <label for="nameCourse" class="labelCourse">Min:</label>
+                                <div class="inputMin">
+                                    <input class="form-control" value="1" type="number">
+                                </div>
+                            </div>
+                            <div class="max">
+                                <label for="nameCourse" class="labelCourse">Max:</label>
+                                <div class="inputMax">
+                                    <input class="form-control" value="15" type="number">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxInputCourse moneyCourse">
+                            <label for="nameCourse" class="labelCourse">Tags: </label>
+                            <div>
+                                <input class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="boxInputCourse describe">
+                            <label for="nameCourse" class="labelCourse">Tags: </label>
+                            <div class="boxDes">
+                                <textarea id="myInput"></textarea>
+                            </div>
+                            <div id="charCount"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxRight1">
+                    <div id="div1" class="line1">
+                        <p class="titleCourse">Thông tin khóa học</p>
+                        <i class="fa-solid fa-chevron-down iconDown"></i>
+                    </div>
+                </div>
+                <div class="boxRight1">
+                    <div id="div1" class="line1">
+                        <p class="titleCourse">Thông tin khóa học</p>
+                        <i class="fa-solid fa-chevron-down iconDown"></i>
+                    </div>
+                </div>
+                <button class="btnBoxRight" style="background-color: #f6652c; color: #FFFFFF; font-weight: 600;">TẠO KHÓA HỌC</button>
             </div>
         </div>
     </div>
     <script src="./main.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
 </body>
 </html>

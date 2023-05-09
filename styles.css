@@ -23,13 +23,26 @@
     width: 1880px;
     height: 350px;
     object-fit: cover;
+    z-index: 1;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 1880px;
+    height: 350px;
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 0;
 }
 
 .title{
+    position: relative;
     margin: -200px 0;
+    font-weight: bold;
     text-align: center;
-    z-index: 1;
+    z-index: 3;
 }
 
 .titleHeader{
@@ -61,18 +74,17 @@
 }
 
 .boxLeft{
+    border-radius: 4px;
     width: 400px;
     margin-right: 5px;
-}
-
-.boxRight{
-    flex: 1;
-    background-color: var(--primary);
+    background-color: #FFFFFF;
 }
 
 .back_gound-img{
     margin-left: 0;
     width: 400px;
+    height: 250px;
+    object-fit: cover;
 }
 
 .mentor{
@@ -80,11 +92,12 @@
     top: 525px;
     width: 130px;
     left: 430px;
+    object-fit: cover;
 }
 
 .mentorName{
     text-align: center;
-    margin-top: 30px;
+    margin-top: 40px;
     font-weight: 700;
 }
 
@@ -129,7 +142,6 @@
 .address p{
     margin: 10px 10px;
     color: rgb(149, 159, 159);
-
 }
 
 .iconAddress{
@@ -156,8 +168,11 @@
 }
 
 .actions{
+    background-color: #FFFFFF;
+    margin: 10px 0;
     width: 400px;
     height: 300px;
+    border-radius: 4px;
 }
 
 .actions h3{
@@ -182,6 +197,203 @@
     width: 380px;
     margin: 0 10px;
 }
+
+/* box right */
+.boxRight{
+    flex: 1;
+    /* background-color: var(--primary); */
+}
+
+.boxRight1{
+    margin: 20px 0;
+}
+
+.line1{
+    width: 900px;
+    height: 60px;
+    background-color: rgb(228, 224, 224);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4px;
+}
+
+.titleCourse{
+    margin: 10px 15px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.iconDown{
+    margin: 20px 15px;
+    color: blue;
+}
+
+.test2{
+    width: 900px;
+    height: 1500px;
+    border: 1px solid black;
+    background-color: #FFFFFF;
+    /* background-color: red; */
+}
+
+.slide-down {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+  
+.slide-down.show {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in;
+}
+
+.btnBoxRight{
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+}
+
+.boxRadioCourse,
+.boxInputCourse{
+    margin: 20px 50px;
+}
+
+.titleBoxRadio,
+.labelCourse{
+    margin: 10px 0;
+    color: #000;
+    font-weight: bold;
+}
+
+.inputCourse{
+    border: 1px solid #cfcaca;
+    width: 800px;
+    height: 30px;
+}
+
+.inputCourse input{
+    width: 100%;
+    height: 100%;
+}
+
+.boxRadioCourse{
+    display: flex;
+}
+
+.radioBox{
+    display: flex;
+    margin: 10px 30px;
+}
+
+.customRadio{
+    margin: 0 20px;
+}
+
+.moneyCourse{
+    margin: -20px 50px;
+}
+
+.uploadImage{
+    width: 800px;
+    height: 300px;
+    border: 1px solid #cfcaca;
+    margin: 50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uploadImage img{
+    width: 400px;
+}
+
+.actionsImage{
+    width: 800px;
+    height: 80px;
+    border: 1px solid #cfcaca;
+    margin: -50px 50px;
+    display: flex;
+}
+
+.titleUpload{
+    margin: 25px 20px;
+}
+
+.fileUpload{
+    margin: 25px 20px;
+    border: 1px solid #cfcaca;
+    width: 400px;
+    height: 32px;
+}
+
+.deleteImage{
+    margin: 25px 20px;
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+}
+
+.field{
+    margin: 50px 50px;
+}
+
+.iconSelect{
+    margin: 10px 20px;
+}
+
+.customIconDown{
+    margin: -40px 770px;
+    background-color: #000;
+}
+
+.range{
+    margin: 30px 50px;
+}
+
+
+.min{
+    display: flex;
+}
+
+.max{
+    display: flex;
+}
+
+.inputMin{
+    width: 60px;
+    margin: 0 10px;
+}
+
+.inputMax{
+    width: 60px;
+    margin: 0 10px;
+}
+
+.describe{
+    margin: 50px 50px;
+}
+
+.boxDes{
+    width: 800px;
+    height: 250px;
+    z-index: 0;
+    background-color: rgb(243, 235, 235);
+}
+
+.boxDes textarea{
+    width: 600px;
+    height: 200px;
+    z-index: 5;
+    margin: 20px 100px;
+    border: 1px solid #000;
+}
+
+#charCount{
+    margin: -3px 752px;
+}
+  
+  
+ 
  
 
 
