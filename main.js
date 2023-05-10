@@ -5,6 +5,13 @@ box1.addEventListener('click', () => {
     box2.classList.toggle('slide-down');
 });
 
+const box3 = document.querySelector('#box3');
+const box4 = document.querySelector('#box4');
+
+box3.addEventListener('click', () => {
+    box4.classList.toggle('slide-down');
+});
+
 const myInput = document.getElementById('myInput');
 const charCount = document.getElementById('charCount');
 
@@ -17,12 +24,13 @@ const charCount = document.getElementById('charCount');
 });
 
 const inputCourse = document.getElementById('inputCourse');
+const inputText = document.getElementById('inputText');
 
   inputCourse.addEventListener('input', function() {
-    if(inputCourse.value.length < 3){
-      alert('Lỗi');
-    }
+    inputText.textContent = inputCourse.value;
 });
+
+
 
 const meetLinkInput = document.getElementById('inputLink');
 const meetLinkError = document.getElementById('linkError');

@@ -231,7 +231,7 @@
 .test2{
     width: 900px;
     height: 1500px;
-    border: 1px solid black;
+    border: 1px solid #ccc;
     background-color: #FFFFFF;
     /* background-color: red; */
 }
@@ -398,7 +398,6 @@
     border: 1px solid #ccc;
     margin: 0 auto;
     background-color: #FFFFFF;
-    padding: 10px;
 }
 
 .editor{
@@ -413,7 +412,28 @@
     display: flex;
     justify-content: center;
 }
-  
+
+.titleName{
+    width: 200px;
+}
+
+.titleNameCourse{
+    position: absolute;
+    margin: 40px 140px
+}
+
+.boxTitle{
+    display: flex;
+}
+
+.nameTitleCourse{
+    margin: 45px 300px;
+    position: absolute;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: underline;
+}
   
  
  
