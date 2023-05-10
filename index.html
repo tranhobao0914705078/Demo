@@ -183,15 +183,16 @@
                             <div class="min">
                                 <label for="nameCourse" class="labelCourse">Min:</label>
                                 <div class="inputMin">
-                                    <input class="form-control" value="1" type="number">
+                                    <input id="inputMinValue" class="form-control" min="0" value="1" type="number">
                                 </div>
                             </div>
                             <div class="max">
                                 <label for="nameCourse" class="labelCourse">Max:</label>
                                 <div class="inputMax">
-                                    <input class="form-control" value="15" type="number">
+                                    <input id="inputMaxValue" class="form-control" min="0" value="15" type="number">
                                 </div>
                             </div>
+                            <span id="errorNumber" style="color: red; display: none;">dasdas</span>
                         </div>
                         <div class="boxInputCourse moneyCourse">
                             <label for="nameCourse" class="labelCourse">Tags: </label>

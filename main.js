@@ -37,3 +37,37 @@ meetLinkInput.addEventListener("input", () => {
     }
 })
 
+
+const inputMin = document.getElementById("inputMinValue");
+const inputMax = document.getElementById("inputMaxValue");
+const error = document.getElementById("errorNumber");
+
+inputMin.addEventListener("input", () => {
+  const inputMinValue = inputMin.value.trim();
+  const inputMaxValue = inputMax.value.trim();
+
+  if(inputMinValue < 0){
+    alert("Error")
+  }else if(inputMinValue === inputMaxValue){
+    error.style.display = "block"
+  }else{
+    error.style.display = "none"
+  }
+})
+
+inputMax.addEventListener("input", () => {
+  const inputMaxValue = inputMax.value.trim();
+  const inputMinValue = inputMin.value.trim();
+  
+  if(inputMaxValue < 0){
+    alert("Error")
+  }else if(inputMinValue === inputMaxValue){
+    error.style.display = "block"
+  }else{
+    error.style.display = "none"
+  }
+})
+
+
+
+
