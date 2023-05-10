@@ -41,6 +41,8 @@ meetLinkInput.addEventListener("input", () => {
 const inputMin = document.getElementById("inputMinValue");
 const inputMax = document.getElementById("inputMaxValue");
 const error = document.getElementById("errorNumber");
+const errorMin = document.getElementById("errorMin");
+const errorMax = document.getElementById("errorMax");
 
 inputMin.addEventListener("input", () => {
   const inputMinValue = inputMin.value.trim();
@@ -48,23 +50,35 @@ inputMin.addEventListener("input", () => {
 
   if(inputMinValue < 0){
     alert("Error")
-  }else if(inputMinValue === inputMaxValue){
-    error.style.display = "block"
+    }else if(inputMinValue === inputMaxValue){
+      error.style.display = "block"
+    }else{
+      error.style.display = "none"
+  }
+
+  if (parseInt(inputMinValue) >= parseInt(inputMaxValue)){
+    errorMin.style.display = "block";
   }else{
-    error.style.display = "none"
+    errorMin.style.display = "none";
   }
 })
 
 inputMax.addEventListener("input", () => {
   const inputMaxValue = inputMax.value.trim();
   const inputMinValue = inputMin.value.trim();
-  
+
   if(inputMaxValue < 0){
     alert("Error")
   }else if(inputMinValue === inputMaxValue){
     error.style.display = "block"
   }else{
     error.style.display = "none"
+  }
+
+  if(parseInt(inputMaxValue) <= parseInt(inputMinValue)){
+    errorMax.style.display = "block";
+  }else {
+    errorMax.style.display = "none";
   }
 })
 
