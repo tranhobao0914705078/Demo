@@ -82,6 +82,28 @@ inputMax.addEventListener("input", () => {
   }
 })
 
+const fileUpload = document.querySelector('.fileUpload');
+const uploadImage = document.querySelector('.uploadImage img');
+const deleteImage = document.querySelector('.deleteImage');
+
+fileUpload.addEventListener('change', function() {
+  const file = this.files[0];
+  const reader = new FileReader();
+
+  reader.addEventListener('load', function() {
+    uploadImage.src = reader.result;
+  });
+
+  if (file) {
+    reader.readAsDataURL(file);
+  }
+});
+
+deleteImage.addEventListener('click', () => {
+  const uploadImageValue = document.querySelector('.uploadImage img');
+  uploadImageValue.src = './image/images/upload-img.jpg';
+})
+
 
 
 
