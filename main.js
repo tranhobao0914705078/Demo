@@ -16,4 +16,24 @@ const charCount = document.getElementById('charCount');
     }
 });
 
+const inputCourse = document.getElementById('inputCourse');
+
+  inputCourse.addEventListener('input', function() {
+    if(inputCourse.value.length < 3){
+      alert('Lỗi');
+    }
+});
+
+const meetLinkInput = document.getElementById('inputLink');
+const meetLinkError = document.getElementById('linkError');
+
+meetLinkInput.addEventListener("input", () => {
+    const meetLinkvalue = meetLinkInput.value.trim();
+    const meetLinkRegex = /^https:\/\/meet\.google\.com\/[a-z]{3}-[a-z]{4}-[a-z]{3}$/;
+    if(meetLinkRegex.test(meetLinkvalue)){
+      meetLinkError.style.display = 'none';
+    }else{
+      meetLinkError.style.display = 'block';
+    }
+})
 
