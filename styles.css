@@ -369,8 +369,9 @@
     margin: 0 10px;
 }
 
+/* new */
 .describe{
-    margin: 50px 50px;
+    margin: -1px 1px;
 }
 
 .boxDes{
@@ -434,8 +435,40 @@
     font-size: 16px;
     text-decoration: underline;
 }
-  
- 
+
+@media (max-width: 800px){
+
+}
+
+.autocomplete-items{
+    position: absolute;
+    background: #fff;
+    border: 1px solid #d4d4d4;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 999;
+    width: 795px;
+    margin: 1px 1px;
+}
+
+.autocomplete-items div{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.autocomplete-items div:hover{
+    background: #e9e9e9;
+}
+
+#clearInput{
+    margin: -26px 8px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#myInput{
+    padding: 0 20px;
+}
  
 
 

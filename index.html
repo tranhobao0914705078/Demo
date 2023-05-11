@@ -93,7 +93,7 @@
                         <p class="titleCourse">Thông tin khóa học</p>
                         <i class="fa-solid fa-chevron-down iconDown"></i>
                     </div>
-                    <div id="box2" class="test2 slide-down"> 
+                    <div id="box2" class="test2"> 
                        <div class="boxInputCourse">
                             <label for="nameCourse" class="labelCourse">Tên khóa học</label>
                             <div class="inputCourse">
@@ -198,14 +198,17 @@
                                 <span id="errorMax" style="color: red; display: none;">error</span>
                             </div>
                         </div>
+                        <!-- new -->
                         <div class="boxInputCourse moneyCourse">
                             <label for="nameCourse" class="labelCourse">Tags: </label>
                             <div>
-                                <input class="form-control" type="text">
+                                <input class="form-control" id="selectCourse" type="text">
+                                <span id="clearInput" onclick="clearInput()">x</span>
+                                <div id="autocomplete-list" class="autocomplete-items">
                             </div>
                         </div>
                         <div class="boxInputCourse describe">
-                            <label for="nameCourse" class="labelCourse">Tags: </label>
+                            <label for="nameCourse" class="labelCourse">Thông tin khóa học: </label>
                             <div class="boxDes">
                                 <textarea id="myInput"></textarea>
                             </div>
@@ -244,9 +247,9 @@
 	<script src="//code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="./js/simple.money.format.js"></script>
     <script src="https://cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
-    <script>
+    <!-- <script>
         $('.price_format').simpleMoneyFormat();
-    </script>
+    </script> -->
     <script>
         CKEDITOR.replace( 'editor1');
     </script>

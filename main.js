@@ -112,7 +112,68 @@ deleteImage.addEventListener('click', () => {
   uploadImageValue.src = './image/images/upload-img.jpg';
 })
 
+// new
 
+const priceInput = document.querySelector('.price_format');
+  priceInput.addEventListener('input', function(e) {
+    let price = this.value;
+    price = price.replace(/\D/g, '');
+    price = price.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+    price = price + ' VND';
+    this.value = price;
+});
 
+const tags = ["Javascript", "HTML", "CSS", "React", "Node.js", "Vue.js", "Angular", "Bootstrap", "jQuery"]
+const input = document.getElementById("selectCourse");
+const clearBtn = document.getElementById("clearInput");
 
+    function clearInput() {
+        input.value = '';
+    }
 
+    function toggleClearBtn() {
+        clearBtn.style.visibility = input.value ? "visible" : "hidden";
+    }
+
+    // Hiển thị hoặc ẩn dấu x
+    input.addEventListener('input', toggleClearBtn);
+    toggleClearBtn();
+
+    // Thêm sự kiện keyup cho input để hiển thị danh sách gợi ý
+    input.addEventListener("keyup", function(e) {
+        const value = input.value.toLowerCase();
+        const suggestions = tags.filter(tag => tag.toLowerCase().startsWith(value));
+        const list = document.getElementById("autocomplete-list");
+
+        // Xóa danh sách gợi ý hiện tại
+        while (list.firstChild) {
+            list.removeChild(list.firstChild);
+        }
+
+        // Hiển thị danh sách gợi ý nếu có
+        if (suggestions.length > 0) {
+            list.style.display = "block";
+            for (let i = 0; i < suggestions.length; i++) {
+                const suggestion = suggestions[i];
+                const div = document.createElement("div");
+                div.textContent = suggestion;
+                div.addEventListener("click", function() {
+                    input.value = suggestion;
+                    list.style.display = "none";
+                    toggleClearBtn();
+                });
+                list.appendChild(div);
+            }
+        } else {
+            list.style.display = "none";
+        }
+    });
+
+    // Xử lý sự kiện click bên ngoài input để ẩn danh sách gợi ý
+    document.addEventListener("click", function(e) {
+      const list = document.getElementById("autocomplete-list");
+        if (e.target !== input && e.target.parentNode !== list) {
+            list.style.display = "none";
+        }
+    });
+    
