@@ -23,12 +23,22 @@ const charCount = document.getElementById('charCount');
     }
 });
 
-const inputCourse = document.getElementById('inputCourse');
-const inputText = document.getElementById('inputText');
+//   inputCourse.addEventListener('input', function() {
+//     inputText.textContent = inputCourse.value;
+// });
 
-  inputCourse.addEventListener('input', function() {
-    inputText.textContent = inputCourse.value;
-});
+const validateInput = () => {
+  let inputNameCourse = document.getElementById('inputCourse').value.toString();
+  let error = document.getElementById('inputText');
+
+  if(inputNameCourse.match(/\d+/g)){
+    error.innerHTML = "Chỉ được nhập chữ!";
+  }else if(inputNameCourse.length < 3){
+    error.innerHTML = "Phải nhập trên 3 ký tự!";
+  }else{
+    error.textContent = inputCourse.value;
+  }
+}
 
 
 
