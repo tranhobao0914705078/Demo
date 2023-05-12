@@ -1,0 +1,125 @@
+
+@media (max-width: 1918px){
+    .mentor{
+        margin: -0rem -1rem;
+    }
+}
+
+@media (max-width: 390px){
+    .bannerBG img{
+        width: 23rem;
+    }
+
+    .header{
+        margin: 10px 10px;
+        width: 390px;
+        height: 350px;
+        /* border: 1px solid #000; */
+    }
+
+    .mentor{
+        margin: 0rem -18rem
+    }
+
+    .back_gound-img{
+        width: 23rem;
+    }
+
+    .boxRight{
+        width: 390px;
+        position: relative;
+        left: 10rem;
+        left: -25.4rem;
+        top: 74rem;
+    }
+
+    .line1{
+        width: 23.4rem;
+    }
+
+    .test4,
+    .test2{
+        width: 380px;
+    }
+
+    .inputCourse{
+        width: 20rem;
+    }
+
+    .inputResponsive{
+        margin: 20px 20px;
+    }
+
+    .inputResponsiveBox3{
+        margin: 20px 20px;
+    }
+
+    .boxRadioCourse{
+        display: block;
+    }
+
+    .radioBox{
+        display: block;
+        margin: 0 -20px;
+    }
+
+    .moneyCourse{
+        width: 20rem;
+    }
+
+    .line,
+    .box4,
+    .boxDes,
+    .describe,
+    .customSelect,
+    .uploadImage{
+        width: 20rem;
+    }
+
+    .uploadImage img{
+        width: 10rem;
+    }
+
+    .actionsImage{
+        width: 20rem;
+    }
+
+    .deleteImage{
+        width: 180px;
+        height: 60px;
+        margin: 10px;
+    }
+
+    .titleUpload{
+        width: 244px;
+    }
+
+    .customIconDown{
+        margin: 0 10px;
+        background-color: none;
+        margin: -35px 290px;
+        position: absolute;
+    }
+
+    .boxDes textarea{
+        width: 20rem;
+        margin: 20px 1px;
+    }
+
+    .test2{
+        height: 1700px;
+    }
+
+    .box3{
+        margin: 10px 0;
+    }
+
+    .textArea{
+        width: 20rem;
+        margin: 10px 20px;
+    }
+
+    #charCount{
+        margin: -30px 277px;
+    }
+}

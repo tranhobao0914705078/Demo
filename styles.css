@@ -16,7 +16,7 @@
     margin: 10px 10px;
     width: 1880px;
     height: 350px;
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
 }
 
 .header img{
@@ -26,7 +26,7 @@
     z-index: 1;
 }
 
-.header::before {
+/* .header::before {
     content: "";
     position: absolute;
     top: 10px;
@@ -35,7 +35,7 @@
     height: 350px;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 0;
-}
+} */
 
 .title{
     position: relative;
@@ -89,7 +89,7 @@
 
 .mentor{
     position: absolute;
-    top: 525px;
+    top: 520px;
     width: 130px;
     left: 430px;
     object-fit: cover;
@@ -289,6 +289,10 @@
     margin: 0 20px;
 }
 
+.customSelect{
+    width: 800px;
+}
+
 .moneyCourse{
     margin: -20px 50px;
 }
@@ -343,7 +347,7 @@
 
 .customIconDown{
     margin: -40px 770px;
-    background-color: #000;
+    color: #000;
 }
 
 .range{
@@ -434,10 +438,6 @@
     font-weight: bold;
     font-size: 16px;
     text-decoration: underline;
-}
-
-@media (max-width: 800px){
-
 }
 
 .autocomplete-items{

@@ -30,12 +30,16 @@ const charCount = document.getElementById('charCount');
 const validateInput = () => {
   let inputNameCourse = document.getElementById('inputCourse').value.toString();
   let error = document.getElementById('inputText');
+  let errorValue = document.getElementById('errorValue');
 
   if(inputNameCourse.match(/\d+/g)){
     error.innerHTML = "Chỉ được nhập chữ!";
+    errorValue.innerHTML = "Chỉ được nhập chữ!";
   }else if(inputNameCourse.length < 3){
     error.innerHTML = "Phải nhập trên 3 ký tự!";
+    errorValue.innerHTML = "Phải nhập trên 3 ký tự!";
   }else{
+    errorValue.innerHTML = ""
     error.textContent = inputCourse.value;
   }
 }
@@ -116,10 +120,14 @@ fileUpload.addEventListener('change', function() {
     reader.readAsDataURL(file);
   }
 });
+const defaultFileValue = document.querySelector('#defaultFileValue');
 
 deleteImage.addEventListener('click', () => {
   const uploadImageValue = document.querySelector('.uploadImage img');
+  const inputImage = document.querySelector('input[type="file"]');
   uploadImageValue.src = './image/images/upload-img.jpg';
+  defaultFileValue.value = "";
+  inputImage.value = defaultFileValue.value;
 })
 
 // new
@@ -132,6 +140,7 @@ const priceInput = document.querySelector('.price_format');
     price = price + ' VND';
     this.value = price;
 });
+
 
 const tags = ["Javascript", "HTML", "CSS", "React", "Node.js", "Vue.js", "Angular", "Bootstrap", "jQuery"]
 const input = document.getElementById("selectCourse");
