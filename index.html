@@ -244,17 +244,17 @@
                                 <div class="startTime">
                                     <p class="titleTime">Giờ bắt đầu</p>
                                     <div class="time">
-                                        <p>07:15 SA</p>
-                                        <i class="fa-regular fa-clock"></i>
+                                        <!-- <p>07:15 SA</p> -->
+                                        <input id="startTimeInput" type="time" min="07:00" max="19:00" value="07:15">
                                     </div>
                                 </div>
                                 <div class="endTime">
                                     <p class="titleTime">Giờ kết thúc</p>
                                     <div class="time">
-                                        <p>09:30 SA</p>
-                                        <i class="fa-regular fa-clock"></i>
+                                        <input type="time" id="endTimeInput" value="09:30">
                                     </div>
                                 </div>
+                                <p class="error" id="titleError"></p>
                                 <div class="selectDay">
                                     <div class="form-check customCheckBox">
                                         <label class="form-check-label d-block labelDay" for="myCheckbox">T2</label>
@@ -297,6 +297,15 @@
                                           <option> 4</option>
                                           <option> 5</option>
                                           <option> 6</option>
+                                          <option> 7</option>
+                                          <option> 8</option>
+                                          <option> 9</option>
+                                          <option> 10</option>
+                                          <option> 11</option>
+                                          <option> 12</option>
+                                          <option> 13</option>
+                                          <option> 14</option>
+                                          <option> 15</option>
                                         </select>
                                     </div>
                                     <i class="fa-solid fa-chevron-down customIconTime"></i>
@@ -304,9 +313,9 @@
                                 <div class="commingSoon">
                                     <p class="titleTime">Ngày dự kiến mở lớp</p>
                                     <div class="time">
-                                        <p>03/05/2023</p>
-                                        <i class="fa-regular fa-calendar"></i>
+                                        <input type="date" id="dateInput">
                                     </div>
+                                    <!-- <p class="errorSelectDate" id="titleErrorDate"></p> -->
                                 </div>
                                 <div>
                                 <button class="saveBtn" style="background-color: #FF9138; color: #FFFFFF; font-weight: 600;">Lưu thay đổi</button>
@@ -316,23 +325,25 @@
                                     <table class="table">
                                         <thead>
                                           <tr>
-                                            <th class="test">Giờ bắt đầu</th>
-                                            <th class="test">Giờ kết thúc</th>
-                                            <th class="test">Thứ</th>
-                                            <th class="test">Slot</th>
-                                            <th class="test">Ngày dự kiến mở lớp</th>
-                                            <th class="test">Hành động</th>
+                                            <th style="width: 120px;">Giờ bắt đầu</th>
+                                            <th style="width: 120px;">Giờ kết thúc</th>
+                                            <th style="width: 120px;">Thứ</th>
+                                            <th style="width: 90px;">Slot</th>
+                                            <th style="width: 200px;">Ngày dự kiến mở lớp</th>
+                                            <th>Hành động</th>
                                           </tr>
                                         </thead>
                                         <tbody>
-                                          <!-- <tr>
-                                            <td class="bg-gray">Hàng 1, Cột 1</td>
-                                            <td class="bg-gray">Hàng 1, Cột 2</td>
-                                            <td class="bg-gray">Hàng 1, Cột 3</td>
-                                            <td class="bg-gray">Hàng 1, Cột 4</td>
-                                            <td class="bg-gray">Hàng 1, Cột 5</td>
-                                            <td class="bg-gray">Hàng 1, Cột 6</td>
-                                          </tr> -->
+                                          <tr>
+                                            <td>07:15 SA</td>
+                                            <td>09:30SA</td>
+                                            <td>T2, T3</td>
+                                            <td>1</td>
+                                            <td>15/05/2023</td>
+                                            <td>
+                                                
+                                            </td>
+                                          </tr>
                                         </tbody>
                                       </table>
                                 </div>

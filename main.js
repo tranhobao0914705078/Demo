@@ -202,4 +202,43 @@ const clearBtn = document.getElementById("clearInput");
             list.style.display = "none";
         }
     });
+
     
+// time
+
+const startTimeInput = document.getElementById('startTimeInput');
+const titleError = document.getElementById('titleError');
+const endTimeInput = document.getElementById('endTimeInput');
+
+startTimeInput.addEventListener('input', () => {
+  const startTime = startTimeInput.value;
+  const startHour = parseInt(startTime.split(':')[0]);
+  if(startHour < 7 || startHour > 19){
+    titleError.innerHTML = 'Giờ bắt đầu phải từ 7h sáng đến 19h tối'
+    startTimeInput.value = '07:15';
+  }else{
+    const startMin = parseInt(startTime.split(':')[1]);
+    const startDateTime = new Date();
+    startDateTime.setHours(startHour);
+    startDateTime.setMinutes(startMin);
+    const endDateTime = new Date(startDateTime.getTime() + 2 * 60 * 60 * 1000);
+    const endHour = endDateTime.getHours();
+    const endMin = endDateTime.getMinutes();
+    endTimeInput.value = `${endHour.toString().padStart(2, '0')}:${endMin.toString().padStart(2, '0')}`;
+    titleError.innerHTML = ''
+  }
+})
+
+startTimeInput.addEventListener('change', () => {
+    var startTime = new Date("2000-01-01 " + document.getElementById("startTimeInput").value + ":00");
+    var endTime = new Date("2000-01-01 " + document.getElementById("endTimeInput").value + ":00");
+    console.log(startTime);
+    console.log("end" + endTime);
+    var minEndTime = new Date(startTime.getTime() + (2 * 60 * 60 * 1000));
+    if (endTime < minEndTime) {
+    alert('Giờ kết thúc không được sớm hơn giờ bắt đầu 2 tiếng');
+  }
+});
+
+var today = new Date().toISOString().split('T')[0];
+document.getElementById("dateInput").setAttribute('min', today);
