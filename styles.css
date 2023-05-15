@@ -405,6 +405,14 @@
     background-color: #FFFFFF;
 }
 
+.test5{
+    width: 900px;
+    height: 450px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+
 .editor{
     width: 300px;
     height: 200px;
@@ -469,6 +477,123 @@
 #myInput{
     padding: 0 20px;
 }
- 
+
+/* box 6 */
+.contentBox6{
+    margin: 25px 40px;
+    width: 816px;
+    height: 400px;
+    border: 1px solid #000;
+}
+
+.timeClass{
+    display: flex;
+    margin: 10px 20px;
+}
+
+.titleTime{
+    margin: 10px 0;
+}
+
+.startTime{
+    margin: 0 30px;
+}
+
+.time{
+    width: 174px;
+    height: 36px;
+    border: 1px solid #c5c1c1;
+    border-radius: 4px;
+    display: flex;  
+    justify-content: space-between;
+}
+
+.time p{
+    margin: 5px 10px;
+}
+
+.time i{
+    margin: 8px 10px;
+}
+
+.selectDay{
+    width: 278px;
+    height: 40px;
+    margin: 40px 44px;
+    display: flex;
+}
+
+.form-check-input {
+    width: 1.25em;
+    height: 1.25em;
+  }
+  
+  .form-check-input:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .form-check-input:focus {
+    box-shadow: none;
+  }
+  
+  .form-check-label {
+    margin-top: 0.3em;
+    font-size: 1em;
+    line-height: 1.5;
+  }
+
+  .customCheckBox{
+    margin: -5px 10px
+  }
+
+  .labelDay{
+    margin: 0 -25px;
+  }
+
+  .openClass{
+    width: 774px;
+    height: 100px;
+    margin: 10px 0;
+    display: flex;
+    border: 1px solid #000;
+    margin: 20px 20px;
+  }
+
+  .slot{
+    margin: -7px 36px;
+    display: flex;
+    justify-content: space-between;
+    width: 174px;
+  }
+
+  .customIconTime{
+    width: 99px;
+    margin:  52px -25px
+  }
+
+  .commingSoon{
+    margin: -7px -10px;
+  }
+
+  .titleSlot{
+    margin: 10px 0;
+  }
+
+  .saveBtn{
+    margin: 38px 60px;
+    width: 150px;
+    height: 36px;
+    border-radius: 4px;
+  }
+
+  .tableClass{
+    margin: 120px -645px;
+  }
+  
+
+  .test{
+    margin: 0 30px;
+  }
 
 

@@ -12,6 +12,13 @@ box3.addEventListener('click', () => {
     box4.classList.toggle('slide-down');
 });
 
+const box5 = document.querySelector('#box5');
+const box6 = document.querySelector('#box6');
+
+box5.addEventListener('click', () => {
+    box6.classList.toggle('slide-down');
+});
+
 const myInput = document.getElementById('myInput');
 const charCount = document.getElementById('charCount');
 

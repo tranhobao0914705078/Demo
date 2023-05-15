@@ -94,11 +94,13 @@
         width: 244px;
     }
 
+    .customSelect{
+        display: flex;
+    }
+
     .customIconDown{
-        margin: 0 10px;
+        margin: 10px -35px;
         background-color: none;
-        margin: -35px 290px;
-        position: absolute;
     }
 
     .boxDes textarea{
