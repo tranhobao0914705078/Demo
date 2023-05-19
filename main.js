@@ -238,16 +238,88 @@ endTimeInput.addEventListener('change', () => {
   }
 })
 
-// startTimeInput.addEventListener('change', () => {
-//     var startTime = new Date("2000-01-01 " + document.getElementById("startTimeInput").value + ":00");
-//     var endTime = new Date("2000-01-01 " + document.getElementById("endTimeInput").value + ":00");
-//     console.log(startTime);
-//     console.log("end" + endTime);
-//     var minEndTime = new Date(startTime.getTime() + (2 * 60 * 60 * 1000));
-//     if (endTime < minEndTime) {
-//     alert('Giờ kết thúc không được sớm hơn giờ bắt đầu 2 tiếng');
-//   }
-// });
+var today = new Date();
+today.setDate(today.getDate() + 1);
+var minDate = today.toISOString().split('T')[0];
+document.getElementById('dateInput').setAttribute('min', minDate);
 
-var today = new Date().toISOString().split('T')[0];
-document.getElementById("dateInput").setAttribute('min', today);
+
+// Save Class
+const saveBtn = document.querySelector('.saveBtn');
+
+saveBtn.addEventListener('click', () => {
+  var startTime = document.getElementById('startTimeInput').value;
+  var endTime = document.getElementById('endTimeInput').value;
+  var selectedDays = document.querySelectorAll('.form-check-input:checked').values();
+  var slot = document.getElementById('mySelect').value;
+  var date = document.getElementById('dateInput').value;
+
+  var checkbox = document.getElementsByName('days');
+  var result = "";
+
+  for (var i = 0; i < checkbox.length; i++){
+    if (checkbox[i].checked === true){
+        result += ' [' + checkbox[i].value + ']';
+    }
+  }
+
+  if (!startTime || !endTime || selectedDays.length === 0 || !slot || !date) {
+    alert('Vui lòng nhập đầy đủ thông tin');
+    return;
+  }
+
+  var existingClasses = JSON.parse(localStorage.getItem('classes')) || [];
+  var isDuplicate = existingClasses.some(function(cls) {
+    return cls.startTime === startTime && cls.endTime === endTime && cls.date === date;
+  });
+
+  if (isDuplicate) {
+    alert('Lớp học đã tồn tại trong cùng thời gian và ngày');
+    return;
+  }
+
+  var newClass = {
+    startTime: startTime,
+    endTime: endTime,
+    days: result,
+    slot: slot,
+    date: date
+  };
+
+  existingClasses.push(newClass);
+  localStorage.setItem('classes', JSON.stringify(existingClasses));
+
+  alert('Lưu lớp học thành công');
+  location.reload();
+})
+
+var classes = JSON.parse(localStorage.getItem('classes')) || [];
+
+var htmls = classes.map((classes, index)=>{
+  return `
+      <tr>
+          <td>${classes.startTime}</td>
+          <td>${classes.endTime}</td>
+          <td>${classes.days}</td>
+          <td>${classes.slot}</td>
+          <td>${classes.date}</td>
+          <td>
+            <div class="btnListClass">
+                <button class="btnEdit" style="background-color: #1a088e; color: #FFFFFF; font-weight: 600;">Sửa</button>
+                <button class="btnDelete" style="background-color: #9c1313; color: #FFFFFF; font-weight: 600;">Xóa</button>
+            </div>
+          </td>
+      </tr>
+      `
+ })
+var html_class = htmls.join('');
+document.getElementById("tableClass").innerHTML =  html_class;
+
+var deleteButtons = document.querySelectorAll('.btnDelete');
+deleteButtons.forEach((deleteBtn, index) => {
+  deleteBtn.addEventListener('click', function() {
+    classes.splice(index, 1);
+    localStorage.setItem('classes', JSON.stringify(classes));
+    location.reload();
+  });
+});

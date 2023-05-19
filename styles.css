@@ -606,4 +606,14 @@ tbody tr{
     color: red;
 }
 
+.btnEdit{
+    border-radius: 4px;
+    width: 60px;
+}
+
+.btnDelete{
+    border-radius: 4px;
+    width: 60px;
+}
+
 

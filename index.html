@@ -258,31 +258,31 @@
                                 <div class="selectDay">
                                     <div class="form-check customCheckBox">
                                         <label class="form-check-label d-block labelDay" for="myCheckbox">T2</label>
-                                        <input class="form-check-input" type="checkbox" id="myCheckbox">
+                                        <input name="days" value="T2" class="form-check-input" type="checkbox" id="myCheckbox">
                                     </div>   
                                     <div class="form-check customCheckBox">
                                         <label class="form-check-label d-block labelDay" for="myCheckbox">T3</label>
-                                        <input class="form-check-input" type="checkbox" id="myCheckbox">
+                                        <input name="days" value="T3" class="form-check-input" type="checkbox" id="myCheckbox">
                                     </div>  
                                     <div class="form-check customCheckBox">
                                         <label class="form-check-label d-block labelDay" for="myCheckbox">T4</label>
-                                        <input class="form-check-input" type="checkbox" id="myCheckbox">
+                                        <input name="days" value="T4" class="form-check-input" type="checkbox" id="myCheckbox">
                                     </div>
                                     <div class="form-check customCheckBox">
                                         <label class="form-check-label d-block labelDay" for="myCheckbox">T5</label>
-                                        <input class="form-check-input" type="checkbox" id="myCheckbox">
+                                        <input name="days" value="T5" class="form-check-input" type="checkbox" id="myCheckbox">
                                     </div>  
                                     <div class="form-check customCheckBox">
                                         <label class="form-check-label d-block labelDay" for="myCheckbox">T6</label>
-                                        <input class="form-check-input" type="checkbox" id="myCheckbox">
+                                        <input name="days" value="T6" class="form-check-input" type="checkbox" id="myCheckbox">
                                     </div>  
                                     <div class="form-check customCheckBox">
                                         <label class="form-check-label d-block labelDay" for="myCheckbox">T7</label>
-                                        <input class="form-check-input" type="checkbox" id="myCheckbox">
+                                        <input name="days" value="T7" class="form-check-input" type="checkbox" id="myCheckbox">
                                     </div>  
                                     <div class="form-check customCheckBox">
                                         <label class="form-check-label d-block labelDay" for="myCheckbox">CN</label>
-                                        <input class="form-check-input" type="checkbox" id="myCheckbox">
+                                        <input name="days" value="CN" class="form-check-input" type="checkbox" id="myCheckbox">
                                     </div>                                      
                                 </div>
                             </div>
@@ -318,8 +318,7 @@
                                     <!-- <p class="errorSelectDate" id="titleErrorDate"></p> -->
                                 </div>
                                 <div>
-                                <button class="saveBtn" style="background-color: #FF9138; color: #FFFFFF; font-weight: 600;">Lưu thay đổi</button>
-
+                                    <button class="saveBtn" style="background-color: #FF9138; color: #FFFFFF; font-weight: 600;">Lưu thay đổi</button>
                                 </div>
                                 <div class="tableClass">
                                     <table class="table">
@@ -329,21 +328,12 @@
                                             <th style="width: 120px;">Giờ kết thúc</th>
                                             <th style="width: 120px;">Thứ</th>
                                             <th style="width: 90px;">Slot</th>
-                                            <th style="width: 200px;">Ngày dự kiến mở lớp</th>
+                                            <th style="width: 170px;">Ngày dự kiến mở lớp</th>
                                             <th>Hành động</th>
                                           </tr>
                                         </thead>
-                                        <tbody>
-                                          <tr>
-                                            <td>07:15 SA</td>
-                                            <td>09:30SA</td>
-                                            <td>T2, T3</td>
-                                            <td>1</td>
-                                            <td>15/05/2023</td>
-                                            <td>
-                                                
-                                            </td>
-                                          </tr>
+                                        <tbody id="tableClass">
+                                         
                                         </tbody>
                                       </table>
                                 </div>
