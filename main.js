@@ -229,16 +229,25 @@ startTimeInput.addEventListener('input', () => {
   }
 })
 
-startTimeInput.addEventListener('change', () => {
-    var startTime = new Date("2000-01-01 " + document.getElementById("startTimeInput").value + ":00");
-    var endTime = new Date("2000-01-01 " + document.getElementById("endTimeInput").value + ":00");
-    console.log(startTime);
-    console.log("end" + endTime);
-    var minEndTime = new Date(startTime.getTime() + (2 * 60 * 60 * 1000));
-    if (endTime < minEndTime) {
-    alert('Giờ kết thúc không được sớm hơn giờ bắt đầu 2 tiếng');
+endTimeInput.addEventListener('change', () => {
+  var startTime = new Date("2000-01-01 " + startTimeInput.value + ":00");
+  var endTime = new Date("2000-01-01 " + endTimeInput.value + ":00");
+  var minEndTime = new Date(startTime.getTime() + (2 * 60 * 60 * 1000));
+  if(endTime < minEndTime){
+    titleError.innerHTML = 'Error';
   }
-});
+})
+
+// startTimeInput.addEventListener('change', () => {
+//     var startTime = new Date("2000-01-01 " + document.getElementById("startTimeInput").value + ":00");
+//     var endTime = new Date("2000-01-01 " + document.getElementById("endTimeInput").value + ":00");
+//     console.log(startTime);
+//     console.log("end" + endTime);
+//     var minEndTime = new Date(startTime.getTime() + (2 * 60 * 60 * 1000));
+//     if (endTime < minEndTime) {
+//     alert('Giờ kết thúc không được sớm hơn giờ bắt đầu 2 tiếng');
+//   }
+// });
 
 var today = new Date().toISOString().split('T')[0];
 document.getElementById("dateInput").setAttribute('min', today);
