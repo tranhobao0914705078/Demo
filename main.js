@@ -247,23 +247,25 @@ document.getElementById('dateInput').setAttribute('min', minDate);
 // Save Class
 const saveBtn = document.querySelector('.saveBtn');
 
-saveBtn.addEventListener('click', () => {
+function saveClass(){
   var startTime = document.getElementById('startTimeInput').value;
   var endTime = document.getElementById('endTimeInput').value;
-  var selectedDays = document.querySelectorAll('.form-check-input:checked').values();
+  var selectedDays = document.querySelectorAll('.form-check-input:checked');
   var slot = document.getElementById('mySelect').value;
   var date = document.getElementById('dateInput').value;
 
   var checkbox = document.getElementsByName('days');
-  var result = "";
+  var result = [];
 
-  for (var i = 0; i < checkbox.length; i++){
-    if (checkbox[i].checked === true){
-        result += ' [' + checkbox[i].value + ']';
+  for (var i = 0; i < checkbox.length; i++) {
+    if (checkbox[i].checked === true) {
+      result.push(checkbox[i].value);
     }
   }
 
-  if (!startTime || !endTime || selectedDays.length === 0 || !slot || !date) {
+  var formattedResult = result.join(', '); 
+
+  if (!startTime || !endTime || !formattedResult || !slot || !date) {
     alert('Vui lòng nhập đầy đủ thông tin');
     return;
   }
@@ -291,7 +293,11 @@ saveBtn.addEventListener('click', () => {
 
   alert('Lưu lớp học thành công');
   location.reload();
-})
+}
+
+// saveBtn.addEventListener('click', () => {
+  
+// })
 
 var classes = JSON.parse(localStorage.getItem('classes')) || [];
 
@@ -305,7 +311,7 @@ var htmls = classes.map((classes, index)=>{
           <td>${classes.date}</td>
           <td>
             <div class="btnListClass">
-                <button class="btnEdit" style="background-color: #1a088e; color: #FFFFFF; font-weight: 600;">Sửa</button>
+                <button class="btnEdit" onclick="updateClass(${index})" style="background-color: #1a088e; color: #FFFFFF; font-weight: 600;">Sửa</button>
                 <button class="btnDelete" style="background-color: #9c1313; color: #FFFFFF; font-weight: 600;">Xóa</button>
             </div>
           </td>
@@ -323,3 +329,68 @@ deleteButtons.forEach((deleteBtn, index) => {
     location.reload();
   });
 });
+
+const editClass = (index) => {
+  var existingClasses = JSON.parse(localStorage.getItem('classes')) || [];
+  var classToUpdate = existingClasses[index];
+
+  // Lấy thông tin lớp học cần cập nhật
+  var startTimeInput = document.getElementById('startTimeInput');
+  var endTimeInput = document.getElementById('endTimeInput');
+  var daysInputs = document.getElementsByName('days');
+  var slotInput = document.getElementById('mySelect');
+  var dateInput = document.getElementById('dateInput');
+
+  // Cập nhật giá trị đầu vào với thông tin lớp học
+  startTimeInput.value = classToUpdate.startTime;
+  endTimeInput.value = classToUpdate.endTime;
+
+  // Bỏ chọn tất cả các ngày
+  for (var i = 0; i < daysInputs.length; i++) {
+    daysInputs[i].checked = false;
+  }
+  
+  classToUpdate.days.forEach(function(day) {
+    var dayInput = document.querySelector(`input[value="${day}"]`);
+    if (dayInput) {
+      dayInput.checked = true;
+    }
+  });
+
+  slotInput.value = classToUpdate.slot;
+  dateInput.value = classToUpdate.date;
+
+  saveBtn.innerHTML = 'Lưu Thay Đổi';
+}
+
+const updateClass = (index) => {
+  var existingClasses = JSON.parse(localStorage.getItem('classes')) || [];
+  var classToUpdate = existingClasses[index];
+
+  var startTimeInput = document.getElementById('startTimeInput');
+  var endTimeInput = document.getElementById('endTimeInput');
+  var daysInputs = document.getElementsByName('days');
+  var slotInput = document.getElementById('mySelect');
+  var dateInput = document.getElementById('dateInput');
+
+
+  classToUpdate.startTime = startTimeInput.value;
+  classToUpdate.endTime = endTimeInput.value;
+  classToUpdate.days = [];
+  classToUpdate.slot = slotInput.value;
+  classToUpdate.date = dateInput.value;
+
+  for (var i = 0; i < daysInputs.length; i++) {
+    if (daysInputs[i].checked) {
+      classToUpdate.days.push(daysInputs[i].value);
+    }
+  }
+
+  existingClasses[index] = classToUpdate;
+  localStorage.setItem('classes', JSON.stringify(existingClasses));
+  alert('Lớp học đã được cập nhật');
+  location.reload();
+};
+
+
+
